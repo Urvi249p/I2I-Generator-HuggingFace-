@@ -1,0 +1,22 @@
+[project]
+name = "image_2_image_generator"
+version = "0.1.0"
+description = "image_2_image_generator using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools] >=0.119.0",
+]
+
+[project.scripts]
+kickoff = "image_2_image_generator.main:kickoff"
+run_crew = "image_2_image_generator.main:kickoff"
+plot = "image_2_image_generator.main:plot"
+run_with_trigger = "image_2_image_generator.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"
